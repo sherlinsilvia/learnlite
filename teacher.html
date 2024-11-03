@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>LearnLite Subjects</title>
+</head>
+<style>
+  body {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(240,20,76,1) 100%);
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  li a:hover {
+    background-color: grey;
+    transform: scale(1.1);
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .subject-section {
+    margin: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .subject-section:hover {
+    transform: translateY(-5px);
+  }
+
+  h1, h2 {
+    text-align: center;
+    color:pink;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+
+  .subject-title {
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(85, 85, 85, 0.8);
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .subject-title:hover {
+    background-color:pink;
+  }
+
+  .subject-content {
+    display: none;
+    margin-top: 10px;
+    color: white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .subject-section:hover .subject-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+  }
+</style>
+<body>
+    <h1>📖 LearnLite 🏫</h1>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+    <div class="subject-section">
+      <h2 class="subject-title" onclick="toggleContent('math-content')"><span class="icon">📘</span>Mathematics</h2>
+      <div class="subject-content" id="math-content">
+        <p><strong>NCERT Textbooks:</strong> For foundational concepts in Mathematics.</p>
+        <p><strong>Khan Academy:</strong> Video tutorials from algebra to calculus.</p>
+        <p><strong>Paul’s Math Notes:</strong> Helpful for algebra, trigonometry, and more.</p>
+      </div>
+    </div>
+
+    <div class="subject-section">
+      <h2 class="subject-title" onclick="toggleContent('physics-content')"><span class="icon">🔬</span>Physics</h2>
+      <div class="subject-content" id="physics-content">
+        <p><strong>H.C. Verma's Physics:</strong> Essential for understanding mechanics and more.</p>
+        <p><strong>HyperPhysics:</strong> Interactive explanations of key physics concepts.</p>
+      </div>
+    </div>
+
+    <div class="subject-section">
+      <h2 class="subject-title" onclick="toggleContent('chemistry-content')"><span class="icon">🧪</span>Chemistry</h2>
+      <div class="subject-content" id="chemistry-content">
+        <p><strong>NCERT Chemistry Textbooks:</strong> Detailed and structured resources for chemistry.</p>
+        <p><strong>Chemguide:</strong> Comprehensive explanations of key topics.</p>
+      </div>
+    </div>
+
+    <div class="subject-section">
+      <h2 class="subject-title" onclick="toggleContent('biology-content')"><span class="icon">🌿</span>Biology</h2>
+      <div class="subject-content" id="biology-content">
+        <p><strong>Campbell Biology:</strong> A detailed resource for higher secondary biology students.</p>
+        <p><strong>Khan Academy Biology:</strong> Tutorials on various topics from cell biology to ecology.</p>
+      </div>
+    </div>
+
+    <div class="subject-section">
+      <h2 class="subject-title" onclick="toggleContent('english-content')"><span class="icon">📖</span>English</h2>
+      <div class="subject-content" id="english-content">
+        <p><strong>The Elements of Style:</strong> A classic guide to improving writing and communication.</p>
+        <p><strong>Project Gutenberg:</strong> Free digital books for classical literature and reading assignments.</p>
+      </div>
+    </div>
+
+    <div class="subject-section">
+      <h2 class="subject-title" onclick="toggleContent('social-studies-content')"><span class="icon">🌍</span>Social Studies/History</h2>
+      <div class="subject-content" id="social-studies-content">
+        <p><strong>NCERT History and Civics Textbooks:</strong> Essential resources for history and political science.</p>
+        <p><strong>BBC Bitesize:</strong> Study guides and quizzes on history, geography, and economics.</p>
+      </div>
+    </div><center>
+      <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=RevampFRE&tryout=true&totid=17ca9504-88b4-4823-8777-18f5b01057b1&prevpage=creationv2&subpage=design">
+        <button type="button" class="btn btn-outline-warning">CREATE QUIZ</button>
+    </a>
+    </center><br><br><br>
+    <footer>
+      <p>&copy; 2024 LearnLite</p>
+    </footer>
+
+    <script>
+      function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === 'none' || content.style.display === '') {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      }
+    </script>
+</body>
+</html>
